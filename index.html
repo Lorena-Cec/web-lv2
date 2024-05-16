@@ -1,38 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <title>Fruit Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
-
-    <div class="heading">
+    <div class="heading" role="banner">
       <div class="logo">
         <img src="/images/logo.png" alt="Various fruits displayed" class="logo-img">
         <h1>Fruit Shop</h1>
       </div>
       <div class="right">
-        <div class="search-container">
-          <input type="text" class="search-input" placeholder="Search...">
+        <div class="search-container" role="search">
+          <input type="text" class="search-input" placeholder="Search..." aria-label="Search for fruits">
         </div>
-
-        <div class="cart-container">
-          <button class="cart-button">CART <span class="cart-badge">0</span></button>
+        <div class="cart-container" role="navigation">
+          <button class="cart-button" aria-label="View shopping cart">CART <span class="cart-badge">0</span></button>
         </div>
       </div>
     </div>
-    
-    <div class="banner">
+
+    <div class="banner" role="banner">
       <p class="banner-text">Always buy fresh fruit!</p>
     </div>
 
-    <div class="sort-container">
+    <div class="sort-container" role="listbox">
       <label for="sort">Sort by:</label>
-      <select class="sort-select">
+      <select class="sort-select" id="sort" aria-label="Sort items">
           <option value="default">Default</option>
           <option value="priceLowToHigh">Price Low to High</option>
           <option value="priceHighToLow">Price High to Low</option>
@@ -41,15 +40,15 @@
       </select>
     </div>
 
-    <div class="items-grid"></div>
+    <div class="items-grid" role="grid"></div>
 
-    <div class="modal">
+    <div class="modal" role="dialog">
       <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close" role="button" aria-label="Close modal">&times;</span>
         <h2>Cart</h2>
-        <ul class="cart-items"></ul>
-        <p>Total: <span class="cart-total">$0.00</span></p>
-        <button class="buy-btn">Buy</button>
+        <ul class="cart-items" role="list"></ul>
+        <p>Total: <span class="cart-total" aria-live="polite" aria-atomic="true">$0.00</span></p>
+        <button class="buy-btn" role="button">Buy</button>
       </div>
     </div>
 
