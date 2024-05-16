@@ -129,7 +129,7 @@ function fillItemsGrid() {
         let itemElement = document.createElement('div');
         itemElement.classList.add('item');
         itemElement.innerHTML = `
-            <img src="/images/${item.name.toLowerCase()}.png" alt="${item.name}">
+            <img src="/images/${item.name.toLowerCase()}.avif" alt="${item.name}">
             <h2>${item.name}</h2>
             <p>$${item.price}</p>
             <button class="add-to-cart-btn" data-id="${item.id}">Add to cart</button>
@@ -158,7 +158,7 @@ searchInput.addEventListener('input', function() {
         let itemElement = document.createElement('div');
         itemElement.classList.add('item');
         itemElement.innerHTML = `
-            <img src="/images/${item.name.toLowerCase()}.png" alt="${item.name}">
+            <img src="/images/${item.name.toLowerCase()}.avif" alt="${item.name}">
             <h2>${item.name}</h2>
             <p>$${item.price}</p>
             <button class="add-to-cart-btn" data-id="${item.id}">Add to cart</button>
@@ -198,7 +198,7 @@ sortSelect.addEventListener('change', function() {
         let itemElement = document.createElement('div');
         itemElement.classList.add('item');
         itemElement.innerHTML = `
-            <img src="/images/${item.name.toLowerCase()}.png" alt="${item.name}">
+            <img src="/images/${item.name.toLowerCase()}.avif" alt="${item.name}">
             <h2>${item.name}</h2>
             <p>$${item.price}</p>
             <button class="add-to-cart-btn" data-id="${item.id}">Add to cart</button>
