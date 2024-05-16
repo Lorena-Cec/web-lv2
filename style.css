@@ -1,0 +1,256 @@
+/* CSS variables */
+:root {
+    --primary-color: #FF7F11;
+    --secondary-color: #69140E;
+    --background-color: #FFF0DE;
+    --font-size-base: 16px;
+    --font-family-base: "Roboto", sans-serif;
+}
+
+/* Global styles */
+body {
+    font-size: var(--font-size-base);
+    font-family: "Roboto", sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/*heading*/
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--background-color);
+    margin-bottom: 20px;
+}
+.right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-right:40px;
+}
+h1 {
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: VAR(--secondary-color);
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logo-img{
+    width: 9%;
+    padding: 15px;
+}
+.search-input{
+    height: 25px;
+    font-size: 1.1em;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    padding: 7px;
+}
+
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header styles */
+
+.cart-container {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cart-button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 0.5em 1em;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.cart-badge {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    padding: 0.3em 0.5em;
+    margin-left: 0.2em;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+/* Items grid styles */
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 3em;
+    margin: 1em;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 1em;
+}
+
+.item h2 {
+    margin-top: 0.5em;
+}
+
+.item p {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+.add-to-cart-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal.show-modal {
+    display: block;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 1em;
+    border: 1px solid #ccc;
+    max-width: 600px;
+}
+
+.close {
+    float: right;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cart-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-items li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+    align-items: center;
+}
+
+.cart-items li span {
+    margin-left: 0.5em;
+}
+
+.cart-total {
+    font-weight: bold;
+}
+
+.buy-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+/*banner*/
+
+.banner{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    margin: 20px 0;
+    
+}
+
+.banner-text{
+    font-size: 3.5em;
+    margin: 0;
+    color: var(--background-color); 
+    font-weight: 700;
+}
+
+
+.sort-container {
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.sort-container label {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--background-color);
+    padding-right: 10px;
+}
+
+.sort-container select {
+    padding: 5px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--secondary-color);
+    background-color: var(--background-color);
+    font-family: "Roboto", sans-serif;
+}
+
+.remove-from-cart-btn{
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+}
